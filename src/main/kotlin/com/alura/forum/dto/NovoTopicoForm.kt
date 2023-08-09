@@ -5,10 +5,10 @@ import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Size
 
 data class NovoTopicoForm (
-        @field:NotEmpty @field:Size(min = 5, max = 100)
+        @field:NotEmpty @field:Size(min = 5, max = 100, message = "Título deve conter entre 5 e 100 caracteres")
         val titulo: String,
 
-        @field:NotEmpty
+        @field:NotEmpty(message = "Mensagem não preenchida")
         val mensagem: String,
 
         @field:NotNull
